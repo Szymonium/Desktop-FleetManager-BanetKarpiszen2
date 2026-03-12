@@ -7,14 +7,171 @@
         x:Class="FleetManager.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="FleetManager">
+        Title="SwiftTrans Fleet"
+        Background="#C5A8BE"
+        >
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <Grid ColumnDefinitions="*" RowDefinitions="* 9*">
+        <Grid ColumnDefinitions="*" RowDefinitions="*">
+            <TextBlock
+                Text="SwiftTrans Fleet 🚚"
+                FontSize="32"
+                FontWeight="ExtraBold"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                TextAlignment="Center"
+                />
+        </Grid>
+        <Grid ColumnDefinitions="* * *" RowDefinitions="* * *" Grid.Row="1">
+            <Border Grid.Row="0" Grid.Column="0"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                               />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="0"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="2"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="0"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="2"
+                    BorderBrush="#222222"
+                    BorderThickness="3"
+                    CornerRadius="5">
+                <StackPanel Background="#A2869B">
+                    <TextBlock Text="Przykładowy element"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Padding="0"
+                               Margin="10"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               TextAlignment="Center"
+                    />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
 </Window>
