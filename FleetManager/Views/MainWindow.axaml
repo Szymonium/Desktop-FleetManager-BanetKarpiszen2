@@ -29,17 +29,17 @@
                 />
         </Grid>
         <Grid ColumnDefinitions="* * *" RowDefinitions="* * *" RowSpacing="25" Grid.Row="1" ClipToBounds="False">
-            <views:VehicleItemView Grid.Row="0" Grid.Column="0" Width="510" Height="320" Padding="30"/>
-            <views:VehicleItemView Grid.Row="0" Grid.Column="1" Width="510" Height="320" Padding="30"/>
-            <views:VehicleItemView Grid.Row="0" Grid.Column="2" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="0" Grid.Column="0" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="0" Grid.Column="1" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="0" Grid.Column="2" Width="510" Height="320" Padding="30"/>
 
-            <views:VehicleItemView Grid.Row="1" Grid.Column="0" Width="510" Height="320" Padding="30"/>
-            <views:VehicleItemView Grid.Row="1" Grid.Column="1" Width="510" Height="320" Padding="30"/>
-            <views:VehicleItemView Grid.Row="1" Grid.Column="2" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="1" Grid.Column="0" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="1" Grid.Column="1" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="1" Grid.Column="2" Width="510" Height="320" Padding="30"/>
 
-            <views:VehicleItemView Grid.Row="2" Grid.Column="0" Width="510" Height="320" Padding="30"/>
-            <views:VehicleItemView Grid.Row="2" Grid.Column="1" Width="510" Height="320" Padding="30"/>
-            <views:VehicleItemView Grid.Row="2" Grid.Column="2" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="2" Grid.Column="0" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="2" Grid.Column="1" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItem Grid.Row="2" Grid.Column="2" Width="510" Height="320" Padding="30"/>
         </Grid>
         <Grid Grid.Row="2"/> <!-- footer for space -->
     </Grid>
