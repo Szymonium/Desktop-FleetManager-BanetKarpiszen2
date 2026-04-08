@@ -9,7 +9,7 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="SwiftTrans Fleet"
-        Background="#C5A8BE"
+        Background="#B48592"
         >
 
     <Design.DataContext>
@@ -17,7 +17,7 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <Grid ColumnDefinitions="*" RowDefinitions="* 9*">
+    <Grid ColumnDefinitions="*" RowDefinitions="3* 17* 2*">
         <Grid ColumnDefinitions="*" RowDefinitions="*">
             <TextBlock
                 Text="SwiftTrans Fleet 🚚"
@@ -28,18 +28,19 @@
                 TextAlignment="Center"
                 />
         </Grid>
-        <Grid ColumnDefinitions="* * *" RowDefinitions="* * *" Grid.Row="1">
-            <views:VehicleItemView Grid.Row="0" Grid.Column="0"/>
-            <views:VehicleItemView Grid.Row="0" Grid.Column="1"/>
-            <views:VehicleItemView Grid.Row="0" Grid.Column="2"/>
+        <Grid ColumnDefinitions="* * *" RowDefinitions="* * *" RowSpacing="25" Grid.Row="1" ClipToBounds="False">
+            <views:VehicleItemView Grid.Row="0" Grid.Column="0" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItemView Grid.Row="0" Grid.Column="1" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItemView Grid.Row="0" Grid.Column="2" Width="510" Height="320" Padding="30"/>
 
-            <views:VehicleItemView Grid.Row="1" Grid.Column="0"/>
-            <views:VehicleItemView Grid.Row="1" Grid.Column="1"/>
-            <views:VehicleItemView Grid.Row="1" Grid.Column="2"/>
+            <views:VehicleItemView Grid.Row="1" Grid.Column="0" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItemView Grid.Row="1" Grid.Column="1" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItemView Grid.Row="1" Grid.Column="2" Width="510" Height="320" Padding="30"/>
 
-            <views:VehicleItemView Grid.Row="2" Grid.Column="0"/>
-            <views:VehicleItemView Grid.Row="2" Grid.Column="1"/>
-            <views:VehicleItemView Grid.Row="2" Grid.Column="2"/>
+            <views:VehicleItemView Grid.Row="2" Grid.Column="0" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItemView Grid.Row="2" Grid.Column="1" Width="510" Height="320" Padding="30"/>
+            <views:VehicleItemView Grid.Row="2" Grid.Column="2" Width="510" Height="320" Padding="30"/>
         </Grid>
+        <Grid Grid.Row="2"/> <!-- footer for space -->
     </Grid>
 </Window>
