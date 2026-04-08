@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
@@ -55,8 +56,10 @@ public class JsonVehicleService : IVehicleService
 
             await File.WriteAllTextAsync(_filePath, json);
         }
-        catch
+        catch(Exception err)
         {
+            Console.WriteLine($"Błąd podczas zapisywania pliku:\n{err.Message}");
+            throw;
         }
     }
 
