@@ -17,8 +17,8 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <Grid ColumnDefinitions="*" RowDefinitions="3* 17* 2*">
-        <Grid ColumnDefinitions="*" RowDefinitions="*">
+    <Grid ColumnDefinitions="*" RowDefinitions="2* 17* 2*">
+        <Grid ColumnDefinitions="*" RowDefinitions="*" Background="#9C6F7C" Margin="0 0 0 10">
             <TextBlock
                 Text="SwiftTrans Fleet 🚚"
                 FontSize="32"
