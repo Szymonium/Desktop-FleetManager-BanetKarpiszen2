@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace FleetManager.Views;
 
-public partial class VehicleItemView : UserControl
+public partial class VehicleItem : UserControl
 {
-    public VehicleItemView()
+    public VehicleItem()
     {
         InitializeComponent();
     }
