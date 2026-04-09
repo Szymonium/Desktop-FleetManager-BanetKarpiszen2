@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using FleetManager.Models;
 
@@ -9,6 +11,15 @@ namespace FleetManager.Services;
 public class JsonVehicleService : IVehicleService
 {
     private readonly string _filePath;
+    private readonly JsonSerializerOptions _jsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        WriteIndented = true,
+        Converters =
+        {
+            new JsonStringEnumConverter()
+        }
+    };
 
     public JsonVehicleService(string filePath)
     {
@@ -27,15 +38,13 @@ public class JsonVehicleService : IVehicleService
             if (string.IsNullOrWhiteSpace(json))
                 return GetFallbackVehicles();
 
-            var data = JsonSerializer.Deserialize<List<Vehicle>>(json, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+            var data = JsonSerializer.Deserialize<List<Vehicle>>(json, _jsonOptions);
 
-            return data?.Count > 0 ? data : GetFallbackVehicles();
+            return data ?? GetFallbackVehicles();
         }
-        catch
+        catch(Exception ex)
         {
+            Console.WriteLine(ex);
             return GetFallbackVehicles();
         }
     }
@@ -48,15 +57,13 @@ public class JsonVehicleService : IVehicleService
             if (!string.IsNullOrWhiteSpace(directory) && !Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
 
-            var json = JsonSerializer.Serialize(vehicles, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
+            var json = JsonSerializer.Serialize(vehicles, _jsonOptions);
 
             await File.WriteAllTextAsync(_filePath, json);
         }
-        catch
+        catch(Exception ex)
         {
+            Console.WriteLine(ex);
         }
     }
 
@@ -64,9 +71,9 @@ public class JsonVehicleService : IVehicleService
     {
         return new List<Vehicle>
         {
-            new() { Id = "VH-001", Name = "Rover Alpha", FuelLevel = 75, Status = VehicleStatus.Available },
-            new() { Id = "VH-002", Name = "Rover Beta", FuelLevel = 40, Status = VehicleStatus.Service },
-            new() { Id = "VH-003", Name = "Rover Gamma", FuelLevel = 10, Status = VehicleStatus.Available }
+            new() { RegistrationNumber = "VH-001", Name = "Rover Alpha", FuelLevel = 75, Status = VehicleStatus.Available },
+            new() { RegistrationNumber = "VH-002", Name = "Rover Beta", FuelLevel = 40, Status = VehicleStatus.Service },
+            new() { RegistrationNumber = "VH-003", Name = "Rover Gamma", FuelLevel = 10, Status = VehicleStatus.Available }
         };
     }
 }

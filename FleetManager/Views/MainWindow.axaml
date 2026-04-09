@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:FleetManager.Views"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="1700" Height="1000"
         x:Class="FleetManager.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -17,6 +17,16 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+    <ScrollViewer>
+        <ItemsControl ItemsSource="{Binding Vehicles}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="vm:VehicleItemViewModel">
+                    <views:VehicleItem />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
+    <!--
     <Grid ColumnDefinitions="*" RowDefinitions="3* 17* 2*">
         <Grid ColumnDefinitions="*" RowDefinitions="*">
             <TextBlock
@@ -29,6 +39,8 @@
                 />
         </Grid>
         <Grid ColumnDefinitions="* * *" RowDefinitions="* * *" RowSpacing="25" Grid.Row="1" ClipToBounds="False">
+            <ItemsControl ItemsSource="{Binding Vehicles}">
+                <ItemsControl.ItemTemplate>
             <views:VehicleItem Grid.Row="0" Grid.Column="0" Width="510" Height="320" Padding="30"/>
             <views:VehicleItem Grid.Row="0" Grid.Column="1" Width="510" Height="320" Padding="30"/>
             <views:VehicleItem Grid.Row="0" Grid.Column="2" Width="510" Height="320" Padding="30"/>
@@ -40,7 +52,10 @@
             <views:VehicleItem Grid.Row="2" Grid.Column="0" Width="510" Height="320" Padding="30"/>
             <views:VehicleItem Grid.Row="2" Grid.Column="1" Width="510" Height="320" Padding="30"/>
             <views:VehicleItem Grid.Row="2" Grid.Column="2" Width="510" Height="320" Padding="30"/>
+            </ItemsControl.ItemTemplate>
+                </ItemsControl>
         </Grid>
-        <Grid Grid.Row="2"/> <!-- footer for space -->
+        <Grid Grid.Row="2"/>
     </Grid>
+    -->
 </Window>

@@ -1,56 +1,56 @@
 [
   {
-    "Name": "Ford Transit",
     "RegistrationNumber": "A7K9P3X2Q",
-    "FuelLevel": 78,
-    "CurrentStatus": "Available"
+    "Name": "Ford Transit",
+    "FuelLevel": 39,
+    "Status": "InRoute"
   },
   {
-    "Name": "Mercedes Sprinter",
     "RegistrationNumber": "Z4M8L2N7R",
-    "FuelLevel": 52,
-    "CurrentStatus": "InRoute"
+    "Name": "Mercedes Sprinter",
+    "FuelLevel": 37,
+    "Status": "Available"
   },
   {
-    "Name": "Volkswagen Crafter",
     "RegistrationNumber": "Q1W2E3R4T",
-    "FuelLevel": 34,
-    "CurrentStatus": "Service"
+    "Name": "Volkswagen Crafter",
+    "FuelLevel": 100,
+    "Status": "Service"
   },
   {
-    "Name": "Renault Master",
     "RegistrationNumber": "Y8U7I6O5P",
+    "Name": "Renault Master",
     "FuelLevel": 91,
-    "CurrentStatus": "Available"
+    "Status": "Available"
   },
   {
-    "Name": "Peugeot Boxer",
     "RegistrationNumber": "L3K9J2H6G",
+    "Name": "Peugeot Boxer",
     "FuelLevel": 63,
-    "CurrentStatus": "InRoute"
+    "Status": "InRoute"
   },
   {
-    "Name": "Citroën Jumper",
     "RegistrationNumber": "F5D8S2A1Z",
+    "Name": "Citro\u00EBn Jumper",
     "FuelLevel": 47,
-    "CurrentStatus": "Available"
+    "Status": "Available"
   },
   {
-    "Name": "Fiat Ducato",
     "RegistrationNumber": "X9C4V7B2N",
+    "Name": "Fiat Ducato",
     "FuelLevel": 29,
-    "CurrentStatus": "Service"
+    "Status": "Service"
   },
   {
-    "Name": "Iveco Daily",
     "RegistrationNumber": "M6N3B8V1C",
+    "Name": "Iveco Daily",
     "FuelLevel": 85,
-    "CurrentStatus": "InRoute"
+    "Status": "InRoute"
   },
   {
-    "Name": "Opel Movano",
     "RegistrationNumber": "T2R8E5W9Q",
+    "Name": "Opel Movano",
     "FuelLevel": 56,
-    "CurrentStatus": "Available"
+    "Status": "Available"
   }
 ]

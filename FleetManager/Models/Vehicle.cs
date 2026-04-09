@@ -5,15 +5,15 @@ namespace FleetManager.Models;
 
 public class Vehicle : ReactiveObject
 {
-    private string _id = string.Empty;
+    private string _registration = string.Empty;
     private string _name = string.Empty;
     private double _fuelLevel;
     private VehicleStatus _status;
 
-    public string Id
+    public string RegistrationNumber
     {
-        get => _id;
-        set => this.RaiseAndSetIfChanged(ref _id, value);
+        get => _registration;
+        set => this.RaiseAndSetIfChanged(ref _registration, value);
     }
 
     public string Name
